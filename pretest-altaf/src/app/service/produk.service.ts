@@ -33,7 +33,6 @@ export class ProdukService {
     this.cart.push(product);
     this.products.next(this.cart);
     this.getTotalPrice();
-    console.log(this.cart)
   }
 
   getTotalPrice() : number {

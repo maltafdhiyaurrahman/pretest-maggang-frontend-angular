@@ -1,0 +1,38 @@
+1. Apa yang anda ketahui tentang Rest API?
+
+
+2. Apa yang anda ketahui tentang Server side and Client side processing?
+
+
+3. Apa yang anda ketahui tentang Design pattern Dependency Injection?
+
+
+4. Apa yang anda ketahui tentang Typescript dan Angular framework?
+
+
+5. Apa yang anda ketahui tentang Microfrontend?
+
+
+jawaban: 
+1. Rest Api merupakan cara untuk berkomunikasi antar aplikasi melalui internet.
+2. Server side processing merupakan proses pemrosesan data dan logika yang terjadi di server atau yang biasa kita sebut sebagai backend, dan client side processing merupakan proses pemrosesan yang terjadi di perangkat klien.
+3. Design pattern Dependency Injection (DI) adalah sebuah konsep yang digunakan dalam pengembangan perangkat lunak untuk mengurangi ketergantungan antara komponen-komponen yang saling berinteraksi.
+4. Typescript merupakan sebuah bahasa pemrograman open-source yang dikemabgnakn oleh microsoft, sedangkan angular merupakan framework front-end seperti vue.js, laravel, dan lainnya. angular dikembangkan oleh tim angular di google.
+5. Microfrontend merupakan pengembangan forntend yang dibagi menjadi beberapa bagian kecil, setiap microfrontend dapat dikembangkan secara terpisah. konsep ini terinstirasi dari pendekatan microservice dalam arsitektur software.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+penjelasan aplikasi
+
+pada aplikasi ini saya membuat 3 komponen dan 1 servis
+
+1. DashboardLayoutComponent
+komponen ini dibuat untuk dijadikan navbar yang didalamnya terdapat cart yang
+2. DashboardComponent
+komponen ini merupakan komponen untuk landing page yang didalamnya terdapat produk, pada komponen ini terdapat fitur search
+3. CheckoutComponent
+komponen ini dibuat untuk halama checkout yang didalamya menampilkan data produk yang sudah dimasukan kedalam keranjang
+4. ProdukService
+pada service ini ada menyimpan function untuk memanggil, menambah dan menghapus data yang digunakan pada komponen-komponen tadi.
+
+untuk pengerjaan ini saya menggunakan dummy api dari https://fakestoreapi.com untuk mengambil data data produk

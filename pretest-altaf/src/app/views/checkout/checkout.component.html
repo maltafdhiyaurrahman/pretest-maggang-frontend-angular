@@ -24,10 +24,18 @@
             </tr>
         </tbody>
     </table>
-    <h4>{{ total }}</h4>
-    <a href="#" class="btn btn-primary">Checkout</a>
+    <h4>${{ total }}</h4>
+    <a routerlink="" class="btn btn-success" (click)="checkout()">Checkout</a>
 </div>
+  
 
 <div class="container mt-2" *ngIf="products.length == 0">
-    <h2>empty</h2>
+    <div class="d-flex align-item-center justify-content-center">
+        <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">EMPTY :(</h5>
+              <a href="#" class="btn btn-primary" routerLink="">Go Shop</a>
+            </div>
+          </div>
+    </div>
 </div>

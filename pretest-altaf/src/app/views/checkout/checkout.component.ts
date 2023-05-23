@@ -10,7 +10,9 @@ export class CheckoutComponent {
   public products: any = [];
   public total !: number;
 
-  constructor(private service: ProdukService) { }
+  constructor(
+    private service: ProdukService,
+  ) { }
 
   ngOnInit() {
     this.getCart()
@@ -26,5 +28,9 @@ export class CheckoutComponent {
 
   remove(item: any) {
     this.service.deleteCartItem(item);
+  }
+
+  checkout() {
+    this.service.deleteAllCart();
   }
 }
