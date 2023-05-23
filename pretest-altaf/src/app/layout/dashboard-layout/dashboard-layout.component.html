@@ -1,0 +1,59 @@
+<header>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid d-flex justify-content-center">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-solid fa-cart-shopping"></i>
+                <div class="badge bg-danger" style="font-size: 10px">{{ totalCart }}</div>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>Image</th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th> </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of cart; let i = index">
+                        <td>{{ i + 1 }}</td>
+                        <td><img :src="{{ item.image }}" alt="Product 1" style="width: 50px;"></td>
+                        <td>{{ item.title }}</td>
+                        <td>{{ item.price }}</td>
+                        <td>{{ item.quantity }}</td>
+                        <td>{{ item.total }}</td>
+                        <td>
+                          <button class="btn btn-danger" (click)="remove(item)"><i class="fas fa-trash-alt"></i></button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" routerlink="/checkout"><button class="btn btn-success">Checkout</button></a></li>    
+              </ul>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item disabled">Empty</li>    
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <router-outlet></router-outlet>
+  

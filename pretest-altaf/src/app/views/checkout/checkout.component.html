@@ -1,0 +1,33 @@
+<div class="container mt-2" *ngIf="products.length != 0">
+    <h2>Transaction Summary</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th> </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of products; let i = index">
+                <td><img :src="{{ item.image }}" alt="Product 1" style="width: 50px;"></td>
+                <td>{{ item.title }}</td>
+                <td>{{ item.price }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>{{ item.total }}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="remove(item)"><i class="fas fa-trash-alt"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h4>{{ total }}</h4>
+    <a href="#" class="btn btn-primary">Checkout</a>
+</div>
+
+<div class="container mt-2" *ngIf="products.length == 0">
+    <h2>empty</h2>
+</div>

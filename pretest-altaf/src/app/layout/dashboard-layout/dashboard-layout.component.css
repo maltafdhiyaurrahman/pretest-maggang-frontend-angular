@@ -1,0 +1,14 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-toggler {
+    margin-left: auto;
+}
+  
